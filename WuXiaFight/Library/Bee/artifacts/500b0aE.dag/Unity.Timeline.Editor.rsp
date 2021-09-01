@@ -321,8 +321,6 @@
 -r:"Library/Bee/artifacts/500b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/UnityEngine.UI.ref.dll"
--analyzer:"Assets/DOTween/DOTween.dll"
--analyzer:"Assets/DOTween/Editor/DOTweenEditor.dll"
 "Library/PackageCache/com.unity.timeline@1.5.6/Editor/Actions/ActionContext.cs"
 "Library/PackageCache/com.unity.timeline@1.5.6/Editor/Actions/ActionManager.cs"
 "Library/PackageCache/com.unity.timeline@1.5.6/Editor/Actions/ClipAction.cs"

@@ -320,8 +320,6 @@
 -r:"Library/Bee/artifacts/500b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/VSSettingsProvider.ref.dll"
--analyzer:"Assets/DOTween/DOTween.dll"
--analyzer:"Assets/DOTween/Editor/DOTweenEditor.dll"
 "Assets/DOTween/Modules/DOTweenModuleAudio.cs"
 "Assets/DOTween/Modules/DOTweenModuleEPOOutline.cs"
 "Assets/DOTween/Modules/DOTweenModulePhysics.cs"
@@ -330,7 +328,11 @@
 "Assets/DOTween/Modules/DOTweenModuleUI.cs"
 "Assets/DOTween/Modules/DOTweenModuleUnityVersion.cs"
 "Assets/DOTween/Modules/DOTweenModuleUtils.cs"
+"Assets/Script/FiniteStateMachine.cs"
+"Assets/Script/GlobalData.cs"
+"Assets/Script/State.cs"
 "Assets/Script/Test.cs"
+"Assets/Script/Transition.cs"
 -langversion:8.0
 
 /deterministic
