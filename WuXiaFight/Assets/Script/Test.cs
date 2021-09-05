@@ -1,9 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using DG.Tweening;
+﻿	using System.Collections;
+	using System.Collections.Generic;
+	using UnityEngine;
+	using DG.Tweening;
 
-public class Test : MonoBehaviour {
+	public class Test : MonoBehaviour {
 
 	public int a = 0;
 	// Use this for initialization
@@ -36,4 +36,4 @@ public class Test : MonoBehaviour {
 		//DeBug.Log("====================");
 	}
 
-}
+	}
