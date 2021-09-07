@@ -328,13 +328,16 @@
 "Assets/DOTween/Modules/DOTweenModuleUI.cs"
 "Assets/DOTween/Modules/DOTweenModuleUnityVersion.cs"
 "Assets/DOTween/Modules/DOTweenModuleUtils.cs"
+"Assets/Script/BaseGameEnity.cs"
 "Assets/Script/Fsm/Evaluator.cs"
 "Assets/Script/Fsm/FiniteStateMachine.cs"
 "Assets/Script/Fsm/PlayerFsm.cs"
 "Assets/Script/Fsm/State.cs"
 "Assets/Script/Fsm/Transition.cs"
 "Assets/Script/GlobalData.cs"
+"Assets/Script/GlobalMgr.cs"
 "Assets/Script/Test.cs"
+"Assets/Script/Util/TimeUtil.cs"
 -langversion:8.0
 
 /deterministic

@@ -1,8 +1,9 @@
-    using System.Collections;
-    using System.Collections.Generic;
-    using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using static GlobalData;
 
-    public class FiniteStateMachine
+    public class FiniteStateMachine:BaseGameEnity
 {
     // 名字
     public string name_;
@@ -20,7 +21,7 @@
     public Animator animation_;
 
     // 存储创建的状态机
-    public Dictionary<string, FiniteStateMachine> allFiniteStateMachine;
+    //public Dictionary<string, FiniteStateMachine> allFiniteStateMachine;
     
 
     /// 等待创建 发布-订阅者模式
@@ -34,7 +35,7 @@
     /// <param name="_currentState">当前运行的状态</param>
     /// <param name="_globalState">全局状态</param>
     /// <param name="_animation">动画状态机</param>
-    public FiniteStateMachine( string _name,  State _currentState,  State _globalState,  Animator _animation)
+    public FiniteStateMachine(string _name,  State _currentState,  State _globalState,  Animator _animation):base(fsmId_,Enity.fsm)
     {
         this.name_ = _name;
         Dictionary<string, State> _state = new Dictionary<string, State>();
@@ -43,7 +44,9 @@
         this.globalState_ = _globalState;
         this.animation_ = _animation;
 
-        //allFiniteStateMachine.Add(this.name_, this);
+        // 接口 实现注册
+        //this.RegisterEnity(Enity.fsm, this);
+
         Debug.Log("创建FSM" + name_);
     }
 
@@ -90,22 +93,6 @@
         }
 
         this.currentState_.OnStateUpdate();
-    }
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        foreach (FiniteStateMachine fsm in allFiniteStateMachine.Values)
-        {
-            fsm.UpdateFsm();
-        }
     }
 
 }

@@ -1,6 +1,7 @@
-    using System.Collections;
-    using System.Collections.Generic;
-    using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using static GlobalData;
 
     public class PlayerFsm : MonoBehaviour
     {
@@ -32,7 +33,7 @@
         jumpState.AddTransition(jumpToIdleTran);
 
         FiniteStateMachine playerFsm = new FiniteStateMachine(playerFsmName,idleState,null,null);
-
+        //playerFsm.RegisterEnity(Enity.fsm, playerFsm);
 
         playerFsm.AddState(idleState);
         playerFsm.AddState(moveState);
@@ -44,7 +45,7 @@
     // Update is called once per frame
     void Update()
     {
-        fsm.UpdateFsm();
+        //fsm.UpdateFsm();
     }
 
 
