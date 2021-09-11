@@ -76,6 +76,17 @@ using static GlobalData;
     }
 
     /// <summary>
+    /// 消息接收
+    /// </summary>
+    /// <returns></returns>
+    public override bool MessageHandler(Todo _todo, params object[] _elements)
+    {
+        _todo(_elements);
+        Debug.Log("状态机" + this.name_ + "Id" + this.id_.ToString() + "接收消息");
+        return true;
+    }
+
+    /// <summary>
     /// 状态机遍历切换条件
     /// </summary>
     public void UpdateFsm()

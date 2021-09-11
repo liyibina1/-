@@ -70,10 +70,10 @@
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleSprite.cs" />
     <Compile Include="Assets\Script\GlobalMgr.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUI.cs" />
+    <Compile Include="Assets\Script\BaseGameEnity.cs" />
     <Compile Include="Assets\Script\Test.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\Script\Fsm\FiniteStateMachine.cs" />
-    <Compile Include="Assets\Script\BaseGameEnity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\DOTween\DOTween.XML" />

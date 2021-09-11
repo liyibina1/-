@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static GlobalData;
+using static TimeUtil;
 
     public class PlayerFsm : MonoBehaviour
     {
@@ -40,12 +41,23 @@ using static GlobalData;
         playerFsm.AddState(jumpState);
 
         fsm = playerFsm;
+
+        Todo changeState = delegate (object[] elements)
+        {
+            FiniteStateMachine receiver = (FiniteStateMachine)GetEnity(playerFsm.id_, playerFsm.type_);
+            receiver.ChangeState((State)elements[0]);
+            Debug.Log("´«Êä³É¹¦");
+        };
+
+        AddMessageEvent(playerFsm.id_, playerFsm.type_, playerFsm.id_, playerFsm.type_,10, changeState, idleState);
     }
 
     // Update is called once per frame
     void Update()
     {
         //fsm.UpdateFsm();
+
+        
     }
 
 

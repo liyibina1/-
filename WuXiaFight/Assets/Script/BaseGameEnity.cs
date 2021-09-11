@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using static GlobalData;
 
-
+/// <summary>
+/// 注册接口
+/// </summary>
 interface IRegisterEnity
 {
     void RegisterEnity(Enity _type,object _object);
@@ -31,21 +33,24 @@ public class BaseGameEnity :IRegisterEnity
         switch (_type)
         {
             case Enity.fsm:
-                fsmId_ += 1;
-                Debug.Log(_object);
-                Debug.Log(fsmId_);
-                Debug.Log((FiniteStateMachine)_object);
+                
+                //Debug.Log(_object);
+                //Debug.Log(fsmId_);
+                //Debug.Log((FiniteStateMachine)_object);
                 allFiniteStateMachine.Add(fsmId_, (FiniteStateMachine)_object);
+                fsmId_ += 1;
                 break;
 
             case Enity.telegram:
-                telegramId_ += 1;
+                
                 allMessageEvent.Add(telegramId_, (TimeUtil)_object);
+                telegramId_ += 1;
                 break;
 
             case Enity.broadcast:
-                broadcastId_ += 1;
+                
                 allBroadcastEvent.Add(broadcastId_, (TimeUtil)_object);
+                broadcastId_ += 1;
                 break;
 
             default:
@@ -55,11 +60,13 @@ public class BaseGameEnity :IRegisterEnity
     }
 
     /// <summary>
-    /// 用于派生类重写
+    /// 用于派生类重写消息接收
     /// </summary>
     /// <returns></returns>
-    public virtual bool MessageHandler()
+    public virtual bool MessageHandler(Todo _todo,params object[] _elements)
     {
+        _todo(_elements);
+        Debug.Log("类型" + this.type_.ToString() + "Id" + this.id_.ToString() + "接收消息");
         return true;
     }
 
